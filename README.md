@@ -1,107 +1,108 @@
+# Django URL Shortener
 
-<h1 align="center">Django CBV-DRF(APIView) UrlShortener App</h1>
-<h3 align="center">A simple urlshortener app project with class based views restframework with ApiView classess for learning</h3>
-<p align="center">
-<a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-<a href="https://www.djangoproject.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" alt="django" width="40" height="40"/> </a>
-<a href="https://www.django-rest-framework.org/" target="_blank"> <img src="https://www.django-rest-framework.org/img/logo.png" alt="sqlite" width="90" height="40"/> </a>
-<a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
-<a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-</a>
-<a href="https://www.sqlite.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a>
-</p>
+A web-based URL shortening application built using Django and Django REST Framework.
 
-### Overview
-- [Overview](#overview)
-- [Demo](#demo)
-- [Features](#features)
-- [Setup](#setup)
-- [Getting ready](#getting-ready)
-- [options](#options)
-- [Reformat and check](#reformat-and-check)
-- [Database schema](#database-schema)
-- [Todo](#todo)
-- [Bugs or Opinion](#bugs-or-opinion)
+This project allows users to create short URLs from long URLs and redirect users to the original links. It includes user authentication and a responsive user interface.
 
-### Demo
-This is a brief demo of the functionality of the project
-<p align="center">
-<img src="https://user-images.githubusercontent.com/29748439/135331788-ad66606a-ac33-4196-b482-aed932431937.gif" alt="database schema" width="720"/>
-</p>
+---
 
-### Features
-- Django LTS
-- Class Based View
-- Django RestFramework
-- ApiView 
-- User authentication
-- Black
-- Flake8
-- Responsive Design
-- Bootstrap5
+## Features
+
+### User Authentication
+- User registration and login
+- Secure authentication system
+- Custom validation messages
+- Password validation rules
+- User-friendly login and registration interface
+
+### URL Shortening
+- Convert long URLs into short URLs
+- Redirect short URLs to original URLs
+- Generate unique short links
+- Manage URL shortening functionality
+
+### API Support
+- REST API implementation using Django REST Framework
+- API endpoints for authentication and URL operations
+
+### User Interface
+- Responsive design using Bootstrap 5
+- Modern authentication pages
+- Toast notifications for user feedback
+- Improved form validation experience
+
+---
+
+## Tech Stack
+
+### Backend
+- Python
+- Django
+- Django REST Framework
+
+### Frontend
+- HTML
+- CSS
+- Bootstrap 5
+- JavaScript
+
+### Database
+- SQLite
+
+---
+
+## Project Structure
+Django-URL-Shortener
+│
+├── accounts
+│ └── User authentication
+│
+├── urlshortener
+│ └── URL shortening functionality
+│
+├── core
+│ └── Project configuration
+│
+├── templates
+│ └── HTML templates
+│
+└── manage.py
 
 
+---
 
-### Setup
-To get this repository, run the following command inside your git enabled terminal
-```bash
-git clone https://github.com/alibigdeli/Django-UrlShortener-App
-```
+## Installation and Setup
 
-### Getting ready
-Create an enviroment in order to keep the repo dependencies seperated from your local machine.
-```bash
+1. Clone the repository:
+git clone https://github.com/CHAN-dhana/Django-URL-Shortener.git
+
+2. Navigate to the Project Directory
+cd Django-URL-Shortener
+
+3. Create a Virtual Environment
 python -m venv venv
-```
 
-Make sure to install the dependencies of the project through the requirements.txt file.
-```bash
+4. Activate Virtual Environment
+For Windows:
+venv\Scripts\activate
+
+5. Install Dependencies
 pip install -r requirements.txt
-```
-
-Once you have installed django and other packages, go to the cloned repo directory and run the following command
-
-```bash
+Database Setup
+Apply Database Migrations
 python manage.py makemigrations
-```
-
-This will create all the migrations file (database migrations) required to run this App.
-
-Now, to apply this migrations run the following command
-```bash
 python manage.py migrate
-```
-
-### options
-Project it self has the user creation form but still in order to use the admin you need to create a super user.you can use the createsuperuser option to make a super user.
-```bash
+Create Admin User
 python manage.py createsuperuser
-```
 
-And lastly let's make the App run. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
+Enter the required details to create your admin account.
 
-```bash
+Run Application
+
+Start the Django development server:
 python manage.py runserver
-```
 
-Once the server is up and running, head over to http://127.0.0.1:8000 for the App.
+Open the application in your browser:
+http://127.0.0.1:8000/
 
-### Reformat and check
-If you want your code to be check by pep8 and all the guide lines, there are two packages added to requirements in order to check and reformat code.
-you can use it by this command:
-```bash
-black -l 79 . && flake8
-```
-### Database schema
-A simple view of the project model schema.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/29748439/135331759-05c3e1aa-6308-4405-9ac3-44c9b73711a1.png" alt="database schema" width="300"/>
-</p>
 
-### Todo
-- [ ] add heroku config files
-- [ ] complete the documentation
-- [ ] create a video tutorial
-
-### Bugs or Opinion
-Feel free to let me know if there are any problems or any request you have for this repo.
